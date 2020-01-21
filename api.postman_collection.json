@@ -1,0 +1,141 @@
+{
+	"id": "f710d814-b866-ef03-e1f9-75ce87b65b08",
+	"name": "SKY-TESTE",
+	"description": "",
+	"order": [
+		"92f60546-48ed-d84b-87df-a79750ca2abd",
+		"385382ec-6098-a080-c5d7-28a840caad4f",
+		"3da1dbf1-f1ed-edcf-4db3-e5f329209ead",
+		"06de372c-6d3d-920a-4e16-8be30fcbcfb0"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1579642658601,
+	"owner": "9473209",
+	"public": false,
+	"requests": [
+		{
+			"id": "06de372c-6d3d-920a-4e16-8be30fcbcfb0",
+			"headers": "Content-Type: application/json\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlMjc3YTgyZmFhZWM5MjRjNzUzZjU5YyIsImlhdCI6MTU3OTY0NTk4NywiZXhwIjoxNTc5NjQ2MTY3fQ.cPOqvhz_K02gc7V16UA1V2tpEGTQFVeZ7xgsiobLFhU\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlMjc3YTgyZmFhZWM5MjRjNzUzZjU5YyIsImlhdCI6MTU3OTY0NTk4NywiZXhwIjoxNTc5NjQ2MTY3fQ.cPOqvhz_K02gc7V16UA1V2tpEGTQFVeZ7xgsiobLFhU",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/users",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579646284253,
+			"name": "List users",
+			"description": "",
+			"collectionId": "f710d814-b866-ef03-e1f9-75ce87b65b08",
+			"responses": []
+		},
+		{
+			"id": "385382ec-6098-a080-c5d7-28a840caad4f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/signup",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579645560845,
+			"name": "Sign up",
+			"description": "",
+			"collectionId": "f710d814-b866-ef03-e1f9-75ce87b65b08",
+			"responses": [],
+			"rawModeData": "{\n  \"name\": \"Vinicius Monteiro Arjonas\",\n  \"email\": \"teste@sky.com.br\",\n  \"password\": \"123456\",\n  \"phones\": [\n    {\n      \"ddd\": \"11\",\n      \"number\": \"964107575\"\n    },\n    {\n      \"ddd\": \"11\",\n      \"number\": \"987654879\"\n    }\n  ]\n}"
+		},
+		{
+			"id": "3da1dbf1-f1ed-edcf-4db3-e5f329209ead",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/signin",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1579645587433,
+			"name": "Sign in",
+			"description": "",
+			"collectionId": "f710d814-b866-ef03-e1f9-75ce87b65b08",
+			"responses": [],
+			"rawModeData": "{\n\t\"email\": \"teste@sky.com.br\",\n\t\"password\": \"123456\"\n}"
+		},
+		{
+			"id": "92f60546-48ed-d84b-87df-a79750ca2abd",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "f710d814-b866-ef03-e1f9-75ce87b65b08",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Health Server",
+			"description": "Rota para testar o funcionamento do servidor.",
+			"descriptionFormat": "html",
+			"time": 1579642876030,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"github_username\": \"viniciusmonteiroarjonas\",\n\t\"techs\": \"ReactJs, React Native, Angular\",\n\t\"latitude\": \"\",\n\t\"longitude\": \"\"\"\n}"
+		}
+	]
+}

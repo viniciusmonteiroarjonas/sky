@@ -5,22 +5,26 @@ const routes = new Router()
 const authMiddleware = require('./app/middlewares/auth')
 const controllers = require('./app/controllers')
 
-/* health */
+/* Verifica se a API está disponivel */
 routes.get('/', (req, res) => {
   res.status(200).send({ message: 'server is running!' })
 })
+
+/* Rota para cadastrar um usuário */
+routes.post('/signup', handle(controllers.UserController.store))
+
+/* Rota para autenticação baseada em JWT */
+routes.post('/signin', handle(controllers.SessionController.store))
+
+/* Lista usuários da aplicação */
+routes.get('/users', authMiddleware, handle(controllers.UserController.index))
+
+/* Retorna erro para rotas não mapeadas na aplicação */
 routes.use(function (req, res, next) {
   if (!req.route) {
-    return res.status(404).json({ messagem: 'Não existe essa rota na aplicação.' })
+    return res.status(404).json({ message: 'Route not found!' })
   }
   next()
 })
-routes.post('/signup', handle(controllers.UserController.store))
-// Autenticação
-routes.post('/signin', handle(controllers.SessionController.store))
-
-// Middleware de autenticação
-routes.use(authMiddleware)
-routes.get('/users', handle(controllers.UserController.index))
 
 export default routes

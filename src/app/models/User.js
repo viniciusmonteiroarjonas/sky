@@ -29,7 +29,11 @@ const userSchema = new mongoose.Schema({
         type: String
       }
     }
-  ]
+  ],
+  last_login: {
+    type: Date,
+    default: Date.now
+  }
 }, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } })
 
 userSchema.pre('save', async function (next) {
