@@ -15,3 +15,16 @@ HMG - http://localhost:3000
 - [node.js] - registrada para o back-end
 - [Express] - estrutura rápida de aplicativos de rede node.js.
 - [Mongo] - gerenciador de banco de dados para o ambiente de production.
+
+## Rodar projeto em desenvolvimento
+
+```bash
+yarn
+yarn run dev
+```
+
+## Rodar testes
+
+```bash
+yarn run test
+```

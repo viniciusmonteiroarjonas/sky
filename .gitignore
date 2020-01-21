@@ -5,3 +5,4 @@ package-lock*
 /node_modules
 /build
 /test/coverage
+.env
