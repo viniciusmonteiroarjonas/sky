@@ -4,5 +4,5 @@ yarn.lock*
 package-lock*
 /node_modules
 /dist
-/test/coverage
 .env
+/__testes__/coverage

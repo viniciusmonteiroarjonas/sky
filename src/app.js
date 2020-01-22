@@ -2,6 +2,8 @@ import express from 'express'
 import routes from './routes'
 import mongoose from 'mongoose'
 import databaseConfig from './config/database'
+const validate = require('express-validation')
+const Youch = require('youch')
 
 require('dotenv').config({
   path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env'
@@ -13,6 +15,7 @@ class App {
     this.middlewares()
     this.databases()
     this.routes()
+    this.exception()
   }
 
   middlewares () {
@@ -30,6 +33,24 @@ class App {
 
   routes () {
     this.server.use(routes)
+  }
+
+  exception () {
+    this.server.use(async (err, req, res, next) => {
+      if (err instanceof validate.ValidationError) {
+        return res.status(err.status).json(err)
+      }
+
+      if (process.env.NODE_ENV !== 'production') {
+        const youch = new Youch(err, req)
+
+        return res.json(await youch.toJSON())
+      }
+
+      return res
+        .status(err.status || 500)
+        .json({ error: 'Internal Server Error' })
+    })
   }
 }
 

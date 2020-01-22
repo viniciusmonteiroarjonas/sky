@@ -1,10 +1,9 @@
-
 FROM node:10
 
 RUN mkdir /usr/app
 WORKDIR /usr/app
 
-COPY package.json yarn.lock ./
+COPY package.json ./
 RUN yarn
 
 COPY . ./
