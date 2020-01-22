@@ -3,7 +3,9 @@ import routes from './routes'
 import mongoose from 'mongoose'
 import databaseConfig from './config/database'
 
-require('dotenv').config()
+require('dotenv').config({
+  path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env'
+})
 
 class App {
   constructor () {
