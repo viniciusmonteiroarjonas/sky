@@ -12,19 +12,19 @@ module.exports = {
   // browser: false,
 
   // The directory where Jest should store its cached dependency information
-  // cacheDirectory: "/private/var/folders/m7/3yjbp5ds77xb33vt96mwlwq00000gn/T/jest_dx",
+  // cacheDirectory: "/private/var/folders/89/3xl98y0x6gb_lxkmsx00g_lh0000gn/T/jest_dx",
 
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
+  // collectCoverage: false,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ['src/**'],
+  // collectCoverageFrom: null,
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: '__tests__/coverage',
+  // coverageDirectory: null,
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [
@@ -48,7 +48,7 @@ module.exports = {
   // Make calling deprecated APIs throw helpful error messages
   // errorOnDeprecated: false,
 
-  // Force coverage collection from ignored files usin a array of glob patterns
+  // Force coverage collection from ignored files using an array of glob patterns
   // forceCoverageMatch: [],
 
   // A path to a module which exports an async function that is triggered once before all test suites
