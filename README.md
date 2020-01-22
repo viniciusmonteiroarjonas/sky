@@ -1,4 +1,4 @@
-i# SKY - Backend
+# SKY - Backend
 
 Este projeto servirá como `avaliação` do Vinicius Monteiro Arjonas
 
@@ -24,26 +24,28 @@ HMG - http://localhost:3000
 
 ## Rodar projeto em desenvolvimento
 
-Executar os comandos no bash no diretório principal da aplicação.
-
-### Criar e iniciar o container do mongo
-```bash
-docker-compose up -d
-```
-- Após a execução do comando acima, acessar a url: http://localhost:27017
-
+Caso você tenha o Mongo configurado na sua máquina, alterar as várias de ambiente e executar os comandos abaixo no bash no diretório principal da aplicação.
 ```bash
 yarn
 yarn run dev
 ```
+
+### Rodar o projeto com uma imagem do docker
+
+Execute os comandos na sequência.
+
+```bash
+docker-compose up -d
+docker build -t sky-teste .
+docker run -p 3000:3000 sky-teste
+```
+- Após a execução do comandos acima, acessar as urls:
+- http://localhost:27017 (Mongo)
+- http://localhost:3000 (API)
+
 
 ## Rodar testes
 ```bash
 yarn run test
 ```
 
-### Testar arquivo Dockerfile
-
-```bash
-docker build -t sky-teste .
-docker run -p 3000:3000 sky-teste
