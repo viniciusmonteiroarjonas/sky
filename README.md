@@ -10,7 +10,7 @@ Determinando o status de integridade do servidor
 HMG - http://localhost:3000
 ```
 
-## Tecnologia
+## Tecnologias
 
 - [Node.js] - registrada para o back-end
 - [Express] - estrutura rápida de aplicativos de rede node.js.
