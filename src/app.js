@@ -23,7 +23,7 @@ class App {
   }
 
   databases () {
-    mongoose.connect('mongodb://localhost:27017/sky', {
+    mongoose.connect(databaseConfig.uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,

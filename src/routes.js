@@ -20,7 +20,7 @@ routes.post('/signup', validate(validators.User), handle(controllers.UserControl
 routes.post('/signin', validate(validators.Session), handle(controllers.SessionController.store))
 
 /* Lista usuários da aplicação */
-routes.get('/users', handle(controllers.UserController.index))
+routes.get('/users', authMiddleware, handle(controllers.UserController.index))
 
 /* Retorna erro para rotas não mapeadas na aplicação */
 routes.use(function (req, res, next) {

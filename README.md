@@ -21,6 +21,10 @@ HMG - http://localhost:3000
 ### Requisitos
 
 - [Nodejs 10.0](https://nodejs.org/en/download/) ou superior
+- Instalar Docker compsoe
+```bash
+sudo apt install docker-compose
+```
 
 ## Rodar projeto em desenvolvimento
 
@@ -30,14 +34,15 @@ yarn
 yarn run dev
 ```
 
-### Rodar o projeto com uma imagem do docker
+### Testar arquivo Dockerfile
+```bash
+docker build -t sky .
+docker run -p 3000:3000 sky
+```
 
-Execute os comandos na sequência.
-
+### Testar arquivo docker-compose
 ```bash
 docker-compose up -d
-docker build -t sky-teste .
-docker run -p 3000:3000 sky-teste
 ```
 - Após a execução do comandos acima, acessar as urls:
 - http://localhost:27017 (Mongo)
